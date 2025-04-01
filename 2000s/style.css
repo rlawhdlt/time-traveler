@@ -31,96 +31,123 @@ li {
 }
 
 
-/* pixel-vibes.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-	background-color: #000000;
-	color: #ffffff;
-	font-family: 'Press Start 2P', monospace;
-	margin: 0;
-	padding: 0;
+  background-color: #ffefd5;
+  color: #000;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
 }
-  
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-  
+
 #header {
-	text-align: center;
-	padding: 30px;
-	background-color: #111;
-	border-bottom: 4px solid #ffcc00;
+  background-color: #f00;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 8px dashed #fff700;
 }
-  
+
+
 marquee {
-	color: #00ffff;
-	background-color: #222;
-	padding: 10px;
-	font-size: 12px;
+  background-color: #fff700;
+  color: #000;
+  padding: 10px;
+  font-size: 12px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
-  
-nav {
-	text-align: center;
-	background-color: #222;
-	padding: 10px;
-	font-size: 14px;
+
+#nav {
+  text-align: center;
+  background-color: #00bfff;
+  padding: 15px;
+  border-bottom: 4px solid #000;
 }
-  
-nav a {
-	color: #00ffff;
-	text-decoration: none;
-	margin: 0 10px;
+
+#nav .btn {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #000;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, background-color 0.2s;
 }
-  
-nav a:hover {
-	color: #ffffff;
+
+#nav .btn:hover {
+  background-color: #fff700;
+  transform: scale(1.1);
 }
-  
+
 #sidebar {
-	position: absolute;
-	top: 260px;
-	left: 20px;
-	width: 22%;
-	background-color: #111;
-	padding: 20px;
-	border: 2px solid #ffcc00;
+  position: absolute;
+  top: 260px;
+  left: 30px;
+  width: 22%;
+  background-color: #ffffff;
+  border: 4px double #000;
+  padding: 20px;
 }
-  
+
+#sidebar ul {
+  padding-left: 20px;
+}
+
 #main {
-	position: absolute;
-	top: 260px;
-	left: 26%;
-	width: 70%;
-	background-color: #111;
-	padding: 20px;
-	border: 2px solid #00ffff;
+  position: absolute;
+  top: 260px;
+  left: 30%;
+  width: 65%;
+  background-color: #ffffff;
+  padding: 25px;
+  border: 4px groove #000;
 }
-  
-#main details {
-	background-color: #222;
-	padding: 10px;
-	margin-bottom: 15px;
-	border-left: 4px solid #ffcc00;
+
+details {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 6px solid #ff0000;
 }
-  
-#main summary {
-	cursor: pointer;
-	color: #00ffff;
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
 }
-  
+
 #footer {
-	position: absolute;
-	top: 1300px;
-	width: 100%;
-	text-align: center;
-	padding: 20px;
-	font-size: 10px;
-	background-color: #000;
-	border-top: 2px solid #ffcc00;
+  position: absolute;
+  top: 1300px;
+  width: 100%;
+  text-align: center;
+  background-color: #00bfff;
+  padding: 20px;
+  font-size: 10px;
+  border-top: 4px solid #000;
 }
-  
+
 a {
-	color: #ff6666;
+  color: #0000cd;
+  text-decoration: none;
 }
-  
+
 a:hover {
-	color: #ffffff;
+  color: #ff0000;
+}
+
+input[type="submit"] {
+  background-color: #00ff00;
+  border: 2px solid #000;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #adff2f;
+  transform: scale(1.1);
 }
