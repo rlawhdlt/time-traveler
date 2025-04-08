@@ -1,221 +1,114 @@
-/* This is a CSS override! It overrides default values for ALL elements. */
-/* I highly recommend keeping this override in your code. */
-/* Reset and default element overrides */
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-  }
-  
-  body {
+body {
 	background-color: #1a1a1a;
-	color: #ffffff;
+	color: white;
 	font-family: Arial, sans-serif;
-	line-height: 1.5;
-	padding: 0;
 	margin: 0;
-	position: relative;
-	overflow-x: hidden;
+	padding: 0;
   }
   
-
-  body::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: repeating-linear-gradient(
-	  to bottom,
-	  rgba(255, 255, 255, 0.03),
-	  rgba(255, 255, 255, 0.03) 1px,
-	  transparent 1px,
-	  transparent 2px
-	);
-	z-index: 999;
-	pointer-events: none;
+  .arcade-machine {
+	width: 90%;
+	max-width: 1000px;
+	margin: 30px auto;
+	background-color: #000;
+	border: 10px double #00ffff;
+	padding: 20px;
+	box-shadow: 0 0 20px #00ffff;
   }
   
- 
-  @keyframes pulse {
-	0% { box-shadow: 0 0 8px #fff700; }
-	50% { box-shadow: 0 0 20px #ff0000; }
-	100% { box-shadow: 0 0 8px #fff700; }
-  }
-  
-
-  #header {
+  .header {
 	background-color: #ff3c3c;
-	color: #fff700;
+	padding: 20px;
 	text-align: center;
-	padding: 40px 20px;
-	border-bottom: 5px dashed #fff700;
-	animation: pulse 2s infinite;
+	border-bottom: 5px dashed yellow;
   }
   
-  #header h1 {
-	font-size: 28px;
+  .header h1 {
+	color: yellow;
+	font-size: 24px;
 	margin-bottom: 10px;
   }
   
-  #header p {
+  .header h3 {
+	color: white;
+	margin-bottom: 5px;
+  }
+  
+  .header p {
+	color: white;
 	font-size: 14px;
-	color: #ffffff;
   }
   
   marquee {
-	background-color: #fff700;
-	color: #000000;
-	font-weight: bold;
+	background-color: yellow;
+	color: black;
 	padding: 10px;
-	font-size: 13px;
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
-  }
-  
- 
-  #nav {
-	background-color: #0084ff;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding: 15px;
-	gap: 10px;
-  }
-  
-  #nav a {
-	text-decoration: none;
-	background-color: #ffcc00;
-	color: #000000;
-	padding: 12px 24px;
 	font-weight: bold;
-	border: 3px solid #000;
-	border-radius: 8px;
-	transition: 0.2s;
-	animation: pulse 2s infinite;
-  }
-  
-  #nav a:hover {
-	background-color: #ffffff;
-	transform: scale(1.1);
-  }
-  
-
-  #arcade-layout {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 20px;
-	gap: 40px;
-  }
-  
- 
-  .arcade-panel {
-	width: 90%;
-	max-width: 1000px;
-	background-color: #222222;
-	border-radius: 12px;
-	padding: 25px;
-	box-shadow: 0 0 15px #00ffcc;
-	border: 3px solid #00ffff;
-	position: relative;
-  }
-  
-  
-  #sidebar {
-	background-color: #292929;
-	border: 3px dashed #ffff00;
-	box-shadow: 0 0 10px #ffff00;
-	animation: pulse 2.5s infinite;
-  }
-  
-  #sidebar h3, #sidebar h4 {
-	color: #ffcc00;
-	margin-bottom: 10px;
-  }
-  
-  #sidebar ul {
-	margin-top: 15px;
-	padding-left: 20px;
-  }
-  
-  #sidebar li {
-	margin-bottom: 10px;
-  }
-  
-  #sidebar a {
-	color: #00ffff;
-	text-decoration: none;
-  }
-  
-  #sidebar a:hover {
-	text-decoration: underline;
-	color: #ffffff;
-  }
-  
-  #sidebar input[type="text"] {
-	width: 100%;
-	padding: 10px;
 	margin-top: 10px;
-	border: none;
-	border-radius: 6px;
   }
   
-  #sidebar input[type="submit"],
-  #sidebar input[type="button"],
-  #sidebar .btn {
-	background-color: #00ff00;
-	color: #000;
-	font-weight: bold;
-	border: 2px solid #000;
-	padding: 10px 20px;
-	margin-top: 10px;
-	cursor: pointer;
-	border-radius: 6px;
-	transition: 0.2s;
-  }
-  
-  #sidebar input[type="submit"]:hover {
-	background-color: #adff2f;
-  }
-  
- 
-  #main h2 {
-	color: #ffcc00;
-	margin-bottom: 10px;
-  }
-  
-  #main details {
-	background-color: #111;
-	padding: 15px;
-	margin-top: 20px;
-	border-left: 6px solid #ff0000;
-	border-radius: 6px;
-  }
-  
-  #main summary {
-	font-weight: bold;
-	color: #00ffff;
-	cursor: pointer;
-	margin-bottom: 10px;
-  }
-  
- 
-  #footer {
-	background-color: #111111;
+  .nav-bar {
+	margin: 20px 0;
 	text-align: center;
-	padding: 25px;
-	font-size: 13px;
-	border-top: 4px solid #ff0000;
-	margin-top: 80px;
   }
   
-  #footer a {
-	color: #ffff00;
+  .nav-bar a {
+	background-color: #ffcc00;
+	color: black;
+	padding: 12px 20px;
+	margin: 5px;
+	text-decoration: none;
+	border: 3px solid black;
+	border-radius: 8px;
+	display: inline-block;
+	font-weight: bold;
+  }
+  
+  .nav-bar a:hover {
+	background-color: white;
+  }
+  
+  .content-box {
+	background-color: #111;
+	padding: 20px;
+	margin-bottom: 30px;
+	border-left: 8px solid #ff0000;
+  }
+  
+  .content-box h2 {
+	color: #ffcc00;
+	margin-bottom: 10px;
+  }
+  
+  .content-box p {
+	color: white;
+	margin-bottom: 10px;
+  }
+  
+  .pacman-deco {
+	text-align: center;
+	margin-top: 40px;
+  }
+  
+  .gif {
+	width: 120px;
+	margin: 10px;
+  }
+  
+  .footer {
+	background-color: #111;
+	padding: 20px;
+	font-size: 13px;
+	text-align: center;
+	border-top: 4px solid red;
+  }
+  
+  .footer a {
+	color: yellow;
 	text-decoration: none;
   }
   
-  #footer a:hover {
-	color: #ffffff;
+  .footer a:hover {
+	color: white;
   }
+  
