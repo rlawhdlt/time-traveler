@@ -10,7 +10,7 @@
 	overflow-x: hidden;
   }
   
-  /* 버튼 영역 */
+ 
   .button-container {
 	text-align: center;
 	margin: 30px auto;
@@ -38,7 +38,7 @@
 	border-color: #cc181e;
   }
   
-  /* 아티클 카드 영역 */
+
   .article-container {
 	display: flex;
 	justify-content: center;
@@ -105,7 +105,7 @@
 	overflow-y: auto;
   }
   
-  /* 영상 트랙 영역 */
+  
   .video-container {
 	position: fixed;
 	bottom: 225px;
@@ -159,7 +159,7 @@
 	border: none;
   }
   
-  /* 반응형 대응 */
+ 
   @media (max-width: 768px) {
 	.button-container a {
 	  font-size: 1rem;
