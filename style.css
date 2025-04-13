@@ -1,56 +1,96 @@
 body {
-    background: linear-gradient(to bottom, #b2d8d8, #e0f7fa);
+    background: 
+      radial-gradient(circle at 60% 50%, #ffc6dc 0%, #f89dbf 25%, #f272a8 55%, #e7529b 80%);
+    background-color: #fca0c6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     font-family: 'Press Start 2P', monospace;
-    color: #222;
+    color: white;
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    overflow: hidden;
   }
   
   .game-screen {
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
   
   .title {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px #fff;
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    text-shadow: 3px 3px #222;
   }
   
   .button-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
   }
   
   .menu-button {
-    background-color: #eeeeee;
-    padding: 16px 32px;
-    border: 3px solid #444;
-    border-radius: 6px;
+    background-color: #fff;
     color: #111;
+    padding: 18px 36px;
+    border: 4px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', monospace;
+    width: 260px;
     text-decoration: none;
-    font-size: 0.85rem;
-    width: 240px;
     transition: all 0.15s ease-in-out;
-    box-shadow: 3px 3px 0px #999;
+    box-shadow: 4px 4px 0px #666;
     position: relative;
   }
   
   .menu-button:hover {
-    background-color: #cc181e;
-    color: white;
+    background-color: #ff8ca1;
+    color: #fff;
     border-color: #cc181e;
-    transform: scale(1.03);
-    box-shadow: 2px 2px 0px #666;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 0px #444;
   }
   
   .menu-button:active {
+    transform: scale(0.95);
     top: 2px;
-    box-shadow: 1px 1px 0px #444;
-    transform: scale(0.98);
+    box-shadow: 1px 1px 0px #222;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 0;
+  }
+  
+  .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    animation: star-burst 0.6s ease-out forwards;
+  }
+  
+  @keyframes star-burst {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--x), var(--y)) scale(0.5);
+    }
   }
   
