@@ -10,7 +10,7 @@ body {
 	overflow-x: hidden;
 }
 
-/* Nav Buttons */
+/* NAVIGATION BUTTONS */
 .button-container {
 	text-align: center;
 	margin: 30px auto;
@@ -38,18 +38,23 @@ body {
 	border-color: #cc181e;
 }
 
-/* Article Section - uses grid */
+/* ARTICLE SECTION – Adds grid but keeps layout same */
 .article-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-auto-flow: column; /* use grid to fulfill requirement */
+	grid-auto-columns: 300px;
+	justify-content: center;
+	align-items: flex-start;
 	gap: 24px;
 	padding: 40px 20px 240px;
 	margin-top: 60px;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 
-/* Article Card */
+/* ARTICLE CARD */
 .article-button {
-	width: 100%;
+	width: 300px;
 	height: 60px;
 	margin-top: 40px;
 	background-color: white;
@@ -68,7 +73,7 @@ body {
 }
 
 .article-button:hover {
-	width: 100%;
+	width: 400px;
 	height: 260px;
 	opacity: 1;
 	padding: 20px;
@@ -104,10 +109,10 @@ body {
 	overflow-y: auto;
 }
 
-/* Video Section — changed to relative */
+/* VIDEO SECTION – Uses top margin to prevent layout overlap */
 .video-container {
 	position: relative;
-	margin-top: -200px;
+	margin-top: -180px; /* lifted above default */
 	height: 240px;
 	width: 100%;
 	display: flex;
@@ -157,7 +162,7 @@ body {
 	border: none;
 }
 
-/* Mobile Layout */
+/* MOBILE STYLING ONLY – Expanded article text (no hover) */
 @media (max-width: 768px) {
 	.button-container a {
 		font-size: 1rem;
@@ -168,13 +173,14 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow-x: hidden;
 	}
 
 	.article-button {
-		width: 90%;
+		width: 300px;
 		height: auto;
-		opacity: 1;
 		padding: 20px;
+		opacity: 1;
 		white-space: normal;
 	}
 
