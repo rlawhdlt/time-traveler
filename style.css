@@ -1,96 +1,130 @@
 body {
-    background: 
-      radial-gradient(circle at 60% 50%, #ffc6dc 0%, #f89dbf 25%, #f272a8 55%, #e7529b 80%);
-    background-color: #fca0c6;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    font-family: 'Press Start 2P', monospace;
-    color: white;
     margin: 0;
-    height: 100vh;
+    padding: 0;
+    background: url('assets/Artboard 1.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Minecraftia', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .window-frame {
+    background-color: #ffffff;
+    border: 3px solid #333;
+    width: 420px;
+    box-shadow: 8px 8px 0 #cc88a1;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
   }
   
-  .game-screen {
+  .window-header {
+    width: 100%;
+    background-color: #fd60a7;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .window-header .buttons {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .window-header .buttons span {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px solid #ff00b3;
+    display: inline-block;
+  }
+  
+  .window-body {
+    padding: 40px 30px 20px;
+    width: 100%;
     text-align: center;
-    position: relative;
-    z-index: 1;
   }
   
   .title {
-    font-size: 3.2rem;
-    margin-bottom: 60px;
-    text-shadow: 3px 3px #222;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #ff4d88;
+    text-shadow: 2px 2px #fff;
   }
   
   .button-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
   }
   
-  .menu-button {
-    background-color: #fff;
-    color: #111;
-    padding: 18px 36px;
-    border: 4px solid #333;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: 'Press Start 2P', monospace;
-    width: 260px;
+  .article-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .article-links .article-button {
+    background-color: #ffffff;
+    border: 4px solid #ff4d88;
+    color: #ff4d88;
+    font-size: 14px;
+    padding: 10px 18px;
     text-decoration: none;
-    transition: all 0.15s ease-in-out;
-    box-shadow: 4px 4px 0px #666;
-    position: relative;
+    font-family: 'Minecraftia', sans-serif;
+    box-shadow: 3px 3px 0 #444;
+    transition: all 0.2s ease;
+  }
+  
+  .article-links .article-button:hover {
+    background-color: #ff4d88;
+    color: #fff;
+    box-shadow: 2px 2px 0 #222;
+    transform: scale(1.03);
+  }
+  
+  .article-links .article-button:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 0 #111;
+  }
+  
+  .menu-button {
+    background-color: #ffffff;
+    border: 3px solid #333;
+    box-shadow: 4px 4px 0 #999;
+    color: #222;
+    padding: 16px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    width: 240px;
   }
   
   .menu-button:hover {
-    background-color: #ff8ca1;
-    color: #fff;
-    border-color: #cc181e;
-    transform: scale(1.05);
-    box-shadow: 2px 2px 0px #444;
+    background-color: #ff99bb;
+    box-shadow: 2px 2px 0 #666;
+    transform: scale(1.03);
+    color: white;
   }
   
   .menu-button:active {
-    transform: scale(0.95);
-    top: 2px;
-    box-shadow: 1px 1px 0px #222;
-  }
-  
-  .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: visible;
-    z-index: 0;
-  }
-  
-  .star {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: yellow;
-    border-radius: 50%;
-    animation: star-burst 0.6s ease-out forwards;
-  }
-  
-  @keyframes star-burst {
-    0% {
-      opacity: 1;
-      transform: translate(0, 0) scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translate(var(--x), var(--y)) scale(0.5);
-    }
+    box-shadow: 1px 1px 0 #333;
+    transform: scale(0.98);
   }
   
