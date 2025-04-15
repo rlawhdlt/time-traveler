@@ -6,7 +6,11 @@ let videoIDs = [
 	"9jeJbdVl2jI",
 	"cPJUBQd-PNM",
 	"POmH7dDMDEc",
-	"4UdEFmxRmNE"
+	"4UdEFmxRmNE",
+	"0-ZBlQ9goyk",    
+  	"6_egFmZB8xQ",    
+  	"QqXs0L1B32k",    
+  	"iOztnsBPrAA" 
   ];
   
   function buildLink(videoId) {
@@ -86,6 +90,16 @@ let videoIDs = [
   
 	startScrollLoop(track);
   }
+
+  document.getElementById("favgame-form").addEventListener("submit", function (e) {
+	e.preventDefault();
+	const game = document.getElementById("favgame").value;
+	if (game.trim() !== "") {
+	  alert("Nice!:)");
+	} else {
+	  alert("Please enter your favorite game.");
+	}
+  });
   
   window.addEventListener("DOMContentLoaded", start);
   
