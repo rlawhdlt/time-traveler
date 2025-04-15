@@ -50,7 +50,7 @@ body {
   }
   
   .window-body {
-    padding: 40px 30px 20px;
+    padding: 20px 30px 40px;
     width: 100%;
     text-align: center;
   }
@@ -70,7 +70,7 @@ body {
   }
   
   .article-links {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -128,3 +128,9 @@ body {
     transform: scale(0.98);
   }
   
+  .external-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
