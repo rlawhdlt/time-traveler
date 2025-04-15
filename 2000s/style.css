@@ -112,3 +112,47 @@ body {
 	color: white;
   }
   
+  .form-box {
+	background-color: #222;
+	border-left: 8px solid #00ffff;
+	padding: 20px;
+	margin-bottom: 30px;
+	text-align: center;
+  }
+  
+  .form-box h2 {
+	color: #00ffff;
+	margin-bottom: 10px;
+  }
+  
+  .form-box input[type="text"] {
+	padding: 10px;
+	font-size: 16px;
+	width: 60%;
+	border: 2px solid #ffcc00;
+	background-color: #000;
+	color: white;
+	border-radius: 5px;
+  }
+  
+  .form-box input[type="submit"] {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #ffcc00;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	color: black;
+	font-weight: bold;
+  }
+  
+  .form-box input[type="submit"]:hover {
+	background-color: white;
+	color: #ff3c3c;
+  }
+  
+  .note {
+	color: #aaa;
+	font-size: 14px;
+	margin-top: 15px;
+  }
