@@ -95,9 +95,9 @@ let videoIDs = [
 	e.preventDefault();
 	const game = document.getElementById("favgame").value;
 	if (game.trim() !== "") {
-	  alert("Nice!:)");
+	  alert("Nice! :)");
 	} else {
-	  alert("Please enter your favorite game.");
+	  alert("Please enter your favorite game. :(");
 	}
   });
   
